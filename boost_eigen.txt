@@ -12,3 +12,8 @@ aptitude search boost
 #and then test with a program
 boost_test.cpp
 
+#compile
+g++ -o boost_test main.cpp
+
+#run
+./boost_test
