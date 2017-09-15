@@ -1,0 +1,14 @@
+
+#install boost:
+
+
+sudo apt-get install libboost-all-dev
+
+sudo apt-get install aptitude
+
+aptitude search boost
+
+
+#and then test with a program
+boost_test.cpp
+
