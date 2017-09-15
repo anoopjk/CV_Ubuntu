@@ -1,7 +1,7 @@
 
 #install boost:
 
-
+#credit:  stackoverflow how to install boost
 sudo apt-get install libboost-all-dev
 
 sudo apt-get install aptitude
@@ -17,3 +17,28 @@ g++ -o boost_test main.cpp
 
 #run
 ./boost_test
+
+
+#eigen installation
+
+sudo apt-get install libeigen3-dev
+
+#check
+dpkg -p libeigen3-dev
+
+#test with a program
+eigen_test.cpp
+
+#compile
+g++ -std=c++11 -I/usr/include/eigen3 eigen_test.cpp -o eigen_test
+
+#or you can link as follows  
+#credt: https://askubuntu.com/questions/491067/eigen-installation-seemed-to-work-but-i-still-cant-make-eigen-work
+sudo ln -s /usr/include/eigen3/Eigen /usr/local/include/Eigen
+
+#and now there is no need for adding extra flag
+g++ -std=c++11 eigen_test.cpp -o eigen_test
+
+#run
+./eigen_test
+
