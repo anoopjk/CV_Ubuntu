@@ -58,3 +58,10 @@ export PKG_CONFIG_PATH
 #checking the installation
 sudo apt-get install checkinstall
 sudo checkinstall
+
+
+#check oepncv version pkg
+pkg-config --cflags opencv
+pkg-config --libs opencv
+
+pkg-config --modversion opencv
