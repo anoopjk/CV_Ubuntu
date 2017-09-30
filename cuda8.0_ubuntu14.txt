@@ -1,0 +1,29 @@
+
+#download the cuda8.0 for ubuntu 14.04lts x64 from the archives and update the repository
+
+sudo dpkg -i  cuda-repo-ubuntu1404-8-0-local-ga2_8.0.61-1_amd64.deb
+sudo apt-get update
+
+#install cuda using apt-get 
+sudo apt-get install cuda
+
+#environment variables
+#copy the following to /etc/bash.bashrc  or ~/.bashrc
+
+export CUDA_HOME=/usr/local/cuda-8.0 
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
+ 
+PATH=${CUDA_HOME}/bin:${PATH} 
+export PATH 
+
+#build the cuda samples
+#run the following file found in /usr/local/cuda-8.0/bin/
+#it copies cuda samples to home folder
+cuda-install-samples-7.5.sh  ~ 
+
+cd ~/NVIDIA_CUDA-8.0_Samples
+cd 1_Utilities/deviceQuery
+make
+./deviceQuery
+
+
