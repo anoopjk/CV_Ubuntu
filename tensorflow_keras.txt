@@ -1,0 +1,17 @@
+
+#after installing cuda and cudnn 
+
+#create a conda environment
+conda create -n tensorflow-keras python=2.7
+
+# activate the env
+source activate tensorflow-keras 
+
+#for deactivating use: source deactivate
+#install tensorflow gpu
+pip install tensorflow-gpu
+
+pip install keras
+
+#install other libraries
+conda install numpy scipy scikit-learn spyder
