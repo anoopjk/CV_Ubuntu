@@ -26,4 +26,9 @@ cd 1_Utilities/deviceQuery
 make
 ./deviceQuery
 
-
+#log into nvidia and download the cudnn5.0 for cuda8.0 from archives
+#extract and copy the files to necessary folders
+tar xvzf cudnn-8.0-linux-x64-v5.0-ga.tgz
+sudo cp -P cuda/include/cudnn.h /usr/local/cuda-8.0/include
+sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda-8.0/lib64
+sudo chmod a+r /usr/local/cuda-8.0/include/cudnn.h /usr/local/cuda-8.0/lib64/libcudnn*
